@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     imageUrl: { type: String, required: true },
     cartItems: {type:Object, default:{}},
-    {minimized: false})
+    {minimized: false}
+);
 
 const User = mongoose.models.User || mongoose.model("User", userSchema);
 
